@@ -17,10 +17,11 @@ export const mainSearch = () => {
         const searchInputValue = searchInput.value.toLowerCase();
         btnDelete.style.display = searchInputValue.length > 0 ? 'block' : 'none';
 
-        if(searchInputValue.length > 2) {
+        if(searchInputValue.length >= 3) {
             const recipesToFilter = selectedTags.length > 0 ? recipesFilteredByTag : allRecipes;
             filterRecipesBySearch(recipesToFilter, searchInputValue);
         };
+
         if(searchInputValue.length < 3) resetContent();
 
         //si le champs de recherche est vide et qu'il y a des tags sélectionnés, afficher les recettes correspondantes aux tags sélectionnés
@@ -37,6 +38,7 @@ export const mainSearch = () => {
         updateCurrentRecipes(allRecipes);
         dropdowns.forEach(dropdown => dropdown.resetItemList());
     };
+    
 
     searchInput.addEventListener('input', updateContent);
 

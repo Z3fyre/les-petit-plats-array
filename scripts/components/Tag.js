@@ -17,6 +17,7 @@ export default class Tag {
         tagSection.innerHTML += tag;
 
         const tagBtn = tagSection.querySelectorAll('button');
+        // Appelle la méthode removeTag sans parenthèse pour ne pas l'exécuter tout de suite mais seulement au clic
         tagBtn.forEach(btn => btn.addEventListener('click', this.removeTag));
 
         return tag;

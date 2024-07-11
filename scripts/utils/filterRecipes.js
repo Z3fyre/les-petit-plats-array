@@ -26,6 +26,7 @@ export const filterRecipes = (recipes, tags, inputValue) => {
 
         return tagsMatch && searchMatch;
     });
+
     updateCurrentRecipes(filteredRecipes);
 
     updateWithFilteredRecipes(filteredRecipes, inputValue);

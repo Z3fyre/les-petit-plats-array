@@ -27,3 +27,7 @@ export const updateWithFilteredRecipes = (filteredRecipes, searchInput = "") => 
 
     dropdowns.forEach(dropdown => dropdown.updateItems(filteredItems));
 };
+
+
+
+
